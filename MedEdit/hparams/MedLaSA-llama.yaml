@@ -1,0 +1,19 @@
+alg_name: "MedLaSA"
+model_name: "./../../LLM_checkpoint/chatdoctor-llama"
+device: 0
+
+layers: []
+num_steps: 70
+batch_size: 1
+max_length: 200
+# lr: 5e-3 # adalora
+lr: 1e-4 # lora
+weight_decay: 0
+kl_factor: 0
+rank: 8
+lora_alpha: 32
+lora_dropout: 0.1
+norm_constraint: false
+target_modules: ["q_proj", "v_proj"]  #["up_proj", "down_proj"] #["q_proj", "v_proj"] 
+alpha_pattern: {}
+rank_pattern: {}
