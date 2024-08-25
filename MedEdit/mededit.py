@@ -1,21 +1,15 @@
 # import hydra
 import sklearn
 from easyeditor import BaseEditor
-from easyeditor import KNHyperParams, FTHyperParams, KETrainingHparams,\
-    ROMEHyperParams, MEMITHyperParams, MENDTrainingHparams, MENDHyperParams, \
-    SERACTrainingHparams, SERACHparams, FTApiHyperParams, LoRAHyperParams, \
-    GraceHyperParams, PMETHyperParams, MedLaSAHyperParams
+from easyeditor import  FTHyperParams, ROMEHyperParams, MEMITHyperParams, MENDTrainingHparams, MENDHyperParams,  LoRAHyperParams,  PMETHyperParams, MedLaSAHyperParams
 
 from transformers import LlamaTokenizer
 import numpy as np
-from easyeditor import ZsreDataset, CounterFactDataset
+from easyeditor import CounterFactDataset
 from easyeditor import EditTrainer
-# from easyeditor.models.ike import encode_ike_facts
-# from sentence_transformers import SentenceTransformer
 import argparse
 from collections import defaultdict
 import json
-import random
 import math
 
 def metrics_compute(path):
